@@ -28,7 +28,12 @@ public class StrafeCorrection extends Subsystem {
 			}
 		}
 		
-		if(RobotMap.gyro.getAngle() )
+		if(OI.joystick1.getDirectionDegrees() >= RobotMap.gyro.getAngle() + 5 || OI.joystick1.getDirectionDegrees() <= RobotMap.gyro.getAngle() - 5){
+			RobotMap.drive.arcadeDrive(OI.joystick1.getRawAxis(1), OI.joystick1.getRawAxis(0) + 0.01);
+		}
+		else{
+			RobotMap.drive.arcadeDrive(OI.joystick1.getRawAxis(1), OI.joystick1.getRawAxis(0));
+		}
 		
 		if(Math.abs(RobotMap.backLeft.get()) > Math.abs(RobotMap.frontRight.get())){
 			RobotMap.frontRight.set(RobotMap.frontRight.get());
