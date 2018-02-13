@@ -33,6 +33,9 @@ public class GetLatency extends Subsystem {
 	//List<String> lines;
 
 	public void logMessage(String message) {
+		SmartDashboard.putString("GotThere", "GotThere");
+		
+		
 		if(messageBuffer == null){
 			messageBuffer = new String();
 		}
@@ -44,8 +47,14 @@ public class GetLatency extends Subsystem {
 		//PrintWriter logWriter;
 		
 		try {
+			String CompetitionName = DriverStation.getInstance().getEventName();
+			int matchNumberInt = DriverStation.getInstance().getMatchNumber();
+			
+			String matchNumber = Integer.toString(matchNumberInt);
+			
+			String superString = "/C/" + CompetitionName + matchNumber;
 			//FileWriter logFile;
-			logFile = new FileWriter("/C/file6.csv", true);
+			logFile = new FileWriter(superString, true);
 			//logWriter = new PrintWriter(logFile);
 		} catch (IOException e) {
 			System.out.println(e);

@@ -2,6 +2,7 @@ package org.usfirst.frc.team2557.robot;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
+import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.interfaces.Gyro;
@@ -20,16 +21,20 @@ public class RobotMap {
 	
 	public static Gyro gyro;
 	
+	public static AnalogInput sonarUnit;
+	
 	public static SpeedControllerGroup leftMotors;
 	public static SpeedControllerGroup rightMotors;
 	
 	public static DifferentialDrive drive;
 	
 	public static void init(){
-		frontLeft = new WPI_TalonSRX(7);
-		backLeft = new WPI_TalonSRX(6);
-		frontRight = new WPI_TalonSRX(8);
-		backRight = new WPI_TalonSRX(5);
+		frontLeft = new WPI_TalonSRX(1);
+		backLeft = new WPI_TalonSRX(2);
+		frontRight = new WPI_TalonSRX(3);
+		backRight = new WPI_TalonSRX(4);
+		
+		sonarUnit = new AnalogInput(1);
 		
 		leftMotors = new SpeedControllerGroup(frontLeft, backLeft);
 		rightMotors = new SpeedControllerGroup(backLeft, backRight);

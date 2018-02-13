@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team2557.robot.commands.ExampleCommand;
 import org.usfirst.frc.team2557.robot.commands.GetLatencyCommand;
+import org.usfirst.frc.team2557.robot.commands.GetDistanceCommand;
 import org.usfirst.frc.team2557.robot.commands.MemoryLogCommand;
 import org.usfirst.frc.team2557.robot.commands.DriveCommand;
 import org.usfirst.frc.team2557.robot.commands.CorrectStrafeCommand;
@@ -18,6 +19,7 @@ import org.usfirst.frc.team2557.robot.subsystems.AutoDrive;
 import org.usfirst.frc.team2557.robot.subsystems.Chassis;
 import org.usfirst.frc.team2557.robot.subsystems.ExampleSubsystem;
 import org.usfirst.frc.team2557.robot.subsystems.GetLatency;
+import org.usfirst.frc.team2557.robot.subsystems.Sonar;
 import org.usfirst.frc.team2557.robot.subsystems.StrafeCorrection;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
@@ -36,12 +38,14 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
 	public static GetLatency getLatency;
+	public static Sonar sonar;
 	public static AutoDrive autoDrive;
 	public static Chassis chassis;
 	public static StrafeCorrection strafeCorrection;
 
 	Command autonomousCommand;
 	Command GetLatencyCommand;
+	Command GetDistanceCommand;
 	Command AutoDriveCommand;
 	Command MemoryLogCommand;
 	Command DriveCommand;
@@ -59,10 +63,12 @@ public class Robot extends IterativeRobot {
 		
 		getLatency = new GetLatency();
 		autoDrive = new AutoDrive();
+		sonar = new Sonar();
 		strafeCorrection = new StrafeCorrection();
 		
 		CorrectStrafeCommand = new CorrectStrafeCommand();
 		GetLatencyCommand = new GetLatencyCommand();
+		GetDistanceCommand = new GetDistanceCommand();
 		MemoryLogCommand = new MemoryLogCommand();
 		DriveCommand = new DriveCommand();
 		AutoDriveCommand = new AutoDriveCommand(0, 0, 0);
@@ -86,7 +92,6 @@ public class Robot extends IterativeRobot {
 
 	@Override
 	public void disabledPeriodic() {
-		Scheduler.getInstance().run();
 	}
 
 	/**
@@ -139,15 +144,16 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
-		CorrectStrafeCommand.start();
+//		CorrectStrafeCommand.start();
 //		DriveCommand.start();
 //		SmartDashboard.putString("gotToPeriodic", "Good deal");
-//		GetLatencyCommand.start();
+		GetLatencyCommand.start();
+//		GetDistanceCommand.start();
 //		SmartDashboard.putString("gotPastFirst", "Past!");
 //		MemoryLogCommand.start();
 //		System.out.println(DriverStation.getInstance().getMatchTime());
 //		SmartDashboard.putNumber("Match time", DriverStation.getInstance().getMatchTime());
-//		Scheduler.getInstance().run();
+		Scheduler.getInstance().run();
 	}
 
 	/**

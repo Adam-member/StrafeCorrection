@@ -7,10 +7,10 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class DriveCommand extends Command {
+public class GetDistanceCommand extends Command {
 
-    public DriveCommand() {
-    	//requires(Robot.chassis);
+    public GetDistanceCommand() {
+    	requires(Robot.sonar);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -21,7 +21,7 @@ public class DriveCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	//Robot.chassis.Drive();
+    	Robot.sonar.getDistance();
     }
 
     // Make this return true when this Command no longer needs to run execute()
