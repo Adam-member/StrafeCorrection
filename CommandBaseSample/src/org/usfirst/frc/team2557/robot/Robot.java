@@ -148,7 +148,7 @@ public class Robot extends IterativeRobot {
 //		DriveCommand.start();
 //		SmartDashboard.putString("gotToPeriodic", "Good deal");
 		GetLatencyCommand.start();
-//		GetDistanceCommand.start();
+		GetDistanceCommand.start();
 //		SmartDashboard.putString("gotPastFirst", "Past!");
 //		MemoryLogCommand.start();
 //		System.out.println(DriverStation.getInstance().getMatchTime());
