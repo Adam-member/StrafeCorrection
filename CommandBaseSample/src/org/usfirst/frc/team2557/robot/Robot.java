@@ -147,7 +147,7 @@ public class Robot extends IterativeRobot {
 //		CorrectStrafeCommand.start();
 //		DriveCommand.start();
 //		SmartDashboard.putString("gotToPeriodic", "Good deal");
-		GetLatencyCommand.start();
+//		GetLatencyCommand.start();
 		GetDistanceCommand.start();
 //		SmartDashboard.putString("gotPastFirst", "Past!");
 //		MemoryLogCommand.start();

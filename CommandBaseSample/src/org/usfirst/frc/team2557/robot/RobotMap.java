@@ -1,8 +1,11 @@
 package org.usfirst.frc.team2557.robot;
 
+import org.usfirst.frc.team2557.robot.subsystems.Sonar;
+
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.interfaces.Gyro;
@@ -20,8 +23,8 @@ public class RobotMap {
 	public static WPI_TalonSRX backRight;
 	
 	public static Gyro gyro;
-	
 	public static AnalogInput sonarUnit;
+	public static DigitalInput digSonarUnit;
 	
 	public static SpeedControllerGroup leftMotors;
 	public static SpeedControllerGroup rightMotors;
@@ -34,12 +37,14 @@ public class RobotMap {
 		frontRight = new WPI_TalonSRX(3);
 		backRight = new WPI_TalonSRX(4);
 		
-		sonarUnit = new AnalogInput(1);
+		sonarUnit = new AnalogInput(3);
 		
 		leftMotors = new SpeedControllerGroup(frontLeft, backLeft);
 		rightMotors = new SpeedControllerGroup(backLeft, backRight);
 		
 		drive = new DifferentialDrive(leftMotors, rightMotors);
+		
+		digSonarUnit = new DigitalInput(1);
 	}
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
