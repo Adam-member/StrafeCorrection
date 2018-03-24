@@ -9,12 +9,10 @@
 	<classpathentry kind="var" path="USERLIBS_DIR/navx_frc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/icmplib-1.4.0/icmplib-1.4.0/lib/ping-1.2.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/icmplib-1.4.0/icmplib-1.4.0/lib/ping-1.2.2-sources.jar"/>
-	<classpathentry kind="var" path="USERLIBS_DIR/CTRE_Phoenix-sources.jar"/>
-	<classpathentry kind="var" path="USERLIBS_DIR/CTRE_Phoenix.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/icmp4j-project/trunk/icmp4j/output/lib/icmp4j.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/icmp4j-project/trunk/icmp4j/output/lib/icmp4j-all.jar"/>
 	<classpathentry kind="var" path="wpiutil" sourcepath="wpiutil.sources"/>
-	<classpathentry kind="var" path="USERLIBS_DIR/icmp4j-all.jar"/>
-	<classpathentry kind="var" path="USERLIBS_DIR/icmp4j.jar"/>
+	<classpathentry kind="var" path="USERLIBS_DIR/ADIS16448.jar"/>
+	<classpathentry kind="var" path="USERLIBS_DIR/CTRLib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -2,7 +2,7 @@ package org.usfirst.frc.team2557.robot;
 
 import org.usfirst.frc.team2557.robot.subsystems.Sonar;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+//import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.DigitalInput;
@@ -17,10 +17,10 @@ import edu.wpi.first.wpilibj.interfaces.Gyro;
  * floating around.
  */
 public class RobotMap {
-	public static WPI_TalonSRX frontLeft;
-	public static WPI_TalonSRX backLeft;
-	public static WPI_TalonSRX frontRight;
-	public static WPI_TalonSRX backRight;
+//	public static WPI_TalonSRX frontLeft;
+//	public static WPI_TalonSRX backLeft;
+//	public static WPI_TalonSRX frontRight;
+//	public static WPI_TalonSRX backRight;
 	
 	public static Gyro gyro;
 	public static AnalogInput sonarUnit;
@@ -32,15 +32,15 @@ public class RobotMap {
 	public static DifferentialDrive drive;
 	
 	public static void init(){
-		frontLeft = new WPI_TalonSRX(1);
-		backLeft = new WPI_TalonSRX(2);
-		frontRight = new WPI_TalonSRX(3);
-		backRight = new WPI_TalonSRX(4);
+//		frontLeft = new WPI_TalonSRX(1);
+//		backLeft = new WPI_TalonSRX(2);
+//		frontRight = new WPI_TalonSRX(3);
+//		backRight = new WPI_TalonSRX(4);
 		
 		sonarUnit = new AnalogInput(3);
 		
-		leftMotors = new SpeedControllerGroup(frontLeft, backLeft);
-		rightMotors = new SpeedControllerGroup(backLeft, backRight);
+//		leftMotors = new SpeedControllerGroup(frontLeft, backLeft);
+//		rightMotors = new SpeedControllerGroup(backLeft, backRight);
 		
 		drive = new DifferentialDrive(leftMotors, rightMotors);
 		

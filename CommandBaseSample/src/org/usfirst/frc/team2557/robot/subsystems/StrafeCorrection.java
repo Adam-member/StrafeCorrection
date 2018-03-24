@@ -13,8 +13,8 @@ public class StrafeCorrection extends Subsystem {
 	
 	public void CorrectStrafe(){
 		RobotMap.drive.arcadeDrive(OI.joystick1.getRawAxis(1), OI.joystick1.getRawAxis(0));
-		SmartDashboard.putNumber("frontRightSpeed", RobotMap.frontRight.get());
-		SmartDashboard.putNumber("backLeftSpeed", RobotMap.backLeft.get());
+//		SmartDashboard.putNumber("frontRightSpeed", RobotMap.frontRight.get());
+//		SmartDashboard.putNumber("backLeftSpeed", RobotMap.backLeft.get());
 		
 		SmartDashboard.putNumber("RawAxisY", OI.joystick1.getRawAxis(0));
 		SmartDashboard.putNumber("RawAxisX", OI.joystick1.getRawAxis(1));
@@ -35,12 +35,12 @@ public class StrafeCorrection extends Subsystem {
 			RobotMap.drive.arcadeDrive(OI.joystick1.getRawAxis(1), OI.joystick1.getRawAxis(0));
 		}
 		
-		if(Math.abs(RobotMap.backLeft.get()) > Math.abs(RobotMap.frontRight.get())){
-			RobotMap.frontRight.set(RobotMap.frontRight.get());
-		}
-		else if(Math.abs(RobotMap.backLeft.get()) < Math.abs(RobotMap.frontRight.get())){
-			RobotMap.backLeft.set(RobotMap.frontRight.get());
-		}
+//		if(Math.abs(RobotMap.backLeft.get()) > Math.abs(RobotMap.frontRight.get())){
+//			RobotMap.frontRight.set(RobotMap.frontRight.get());
+//		}
+//		else if(Math.abs(RobotMap.backLeft.get()) < Math.abs(RobotMap.frontRight.get())){
+//			RobotMap.backLeft.set(RobotMap.frontRight.get());
+//		}
 	}
 
     // Put methods for controlling this subsystem

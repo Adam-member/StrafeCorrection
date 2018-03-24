@@ -1,6 +1,6 @@
 package org.usfirst.frc.team2557.robot.subsystems;
 
-import org.icmp4j.IcmpPingUtil;
+//import org.icmp4j.IcmpPingUtil;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -14,8 +14,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.nio.charset.*;
 
-import org.icmp4j.IcmpPingRequest;
-import org.icmp4j.IcmpPingResponse;
+//import org.icmp4j.IcmpPingRequest;
+//import org.icmp4j.IcmpPingResponse;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -109,14 +109,14 @@ public class GetLatency extends Subsystem {
 	
 	public void getDriverStation(){
 		SmartDashboard.putString("gotThere", "You made it!");
-		final IcmpPingRequest request = IcmpPingUtil.createIcmpPingRequest ();
-		request.setHost ("169.254.153.224");
+		//final IcmpPingRequest request = IcmpPingUtil.createIcmpPingRequest ();
+		//request.setHost ("169.254.153.224");
 		
-		final IcmpPingResponse response = IcmpPingUtil.executePingRequest (request);
+		//final IcmpPingResponse response = IcmpPingUtil.executePingRequest (request);
 		
-		final String formattedResponse = IcmpPingUtil.formatResponse (response);
+		//final String formattedResponse = IcmpPingUtil.formatResponse (response);
 
-		SmartDashboard.putString("firstResponse",formattedResponse);
+		//SmartDashboard.putString("firstResponse",formattedResponse);
 		
 		
         Runtime pingCheck = Runtime.getRuntime();
